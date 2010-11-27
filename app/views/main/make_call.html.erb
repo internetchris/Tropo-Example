@@ -1,0 +1,16 @@
+<h1>Make a Call</h1>
+<%= form_tag make_call_path, :method => :post do %>
+	<table>
+		<tr>
+			<td>Dial#:</td><td><%= text_field :call, :number %></td>
+		</tr>
+		<tr>
+			<td>From#:</td><td><%= text_field :call, :from %> <em style="font-size:10px">(leave blank for 'unavailable' number)</em></td>
+		</tr>
+		<tr>
+			<td>Message:</td><td><%= text_area :call, :message, :size => "50x10" %></td>
+	  </tr>
+	</table>
+	<br/>
+	<%= submit_tag "Make Call"%>
+<% end %>
